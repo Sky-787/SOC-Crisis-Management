@@ -1,0 +1,22 @@
+{
+  "name": "soc-crisis-server",
+  "version": "1.0.0",
+  "description": "Crisis_Server — backend del sistema asimétrico de gestión de crisis SOC",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --testPathPattern=tests/"
+  },
+  "dependencies": {
+    "dotenv": "17.4.2",
+    "express": "5.2.1",
+    "socket.io": "4.8.3",
+    "swagger-jsdoc": "6.2.8",
+    "swagger-ui-express": "5.0.1"
+  },
+  "devDependencies": {
+    "fast-check": "4.7.0",
+    "jest": "30.3.0"
+  }
+}
