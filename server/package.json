@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "node --watch src/app.js",
-    "test": "node --experimental-vm-modules node_modules/.bin/jest --testPathPattern=tests/"
+    "test": "jest tests/"
   },
   "dependencies": {
     "dotenv": "17.4.2",
