@@ -178,6 +178,10 @@ const BridgeView = () => {
                           label="Confirmar Ejecución" 
                           variant={info.variant}
                           className="w-full text-[10px]"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleExecute(protocol);
+                          }}
                         />
                       </div>
                     )}

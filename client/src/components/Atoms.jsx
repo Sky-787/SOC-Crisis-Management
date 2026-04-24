@@ -29,7 +29,7 @@ export const ActionButton = ({ label, onClick, disabled, variant = 'primary' }) 
   );
 };
 
-export const TextInput = ({ label, value, onChange, error, placeholder, type = "text" }) => (
+export const TextInput = ({ label, value, onChange, error, placeholder, type = "text", disabled = false }) => (
   <div className="flex flex-col space-y-1 w-full">
     {label && <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">{label}</label>}
     <input
@@ -37,7 +37,8 @@ export const TextInput = ({ label, value, onChange, error, placeholder, type = "
       value={value}
       onChange={onChange}
       placeholder={placeholder}
-      className={`bg-gray-900 border ${error ? 'border-red-500' : 'border-gray-700'} text-white px-4 py-2 rounded focus:outline-none focus:border-blue-500 transition-colors font-mono`}
+      disabled={disabled}
+      className={`bg-gray-900 border ${error ? 'border-red-500' : 'border-gray-700'} text-white px-4 py-2 rounded focus:outline-none focus:border-blue-500 transition-colors font-mono disabled:opacity-50 disabled:cursor-not-allowed`}
     />
     {error && <span className="text-red-500 text-[10px] uppercase font-bold tracking-tight">{error}</span>}
   </div>
